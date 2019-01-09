@@ -49,7 +49,7 @@
 ## 遇到的坑
 1、GitHub不支持http协议  
 
-2、百度会限制我们的访问，所以在<head>标签下一定要添加<meta name = "referrer" content = "never">  
+2、百度会限制我们的访问，所以在 **head** 标签下一定要添加```<meta name = "referrer" content = "never">```  
 
 3、收藏歌曲部分还没完善  
 
