@@ -152,9 +152,13 @@ var Fm={
     
     this.audio.onpause=function(){
       clearInterval(_this.clockStatus)
-    } 
-    
-    
+    }
+
+    this.$container.find('.bar').on('click',function(e){
+          var percentage = e.offsetX/parseFloat($(this).css('width'))
+          _this.audio.currentTime = percentage * _this.audio.duration
+    })
+
     this.$container.find('.btn-collection').on('click', function(){
       var $btn = $(this)
       if($btn.hasClass('active')){
@@ -213,7 +217,7 @@ var Fm={
   updateStatus:function(){
     var min = Math.floor(this.audio.currentTime/60)
     var sec = Math.floor(this.audio.currentTime%60)+''
-    sec = sec.length ===2?sec:'0'+sec
+    sec = sec.length === 2 ? sec: '0' + sec
     var processWidth = this.audio.currentTime/this.audio.duration*100+'%'
     this.$container.find('.cur-time').text(min+':'+sec)
     this.$container.find('.bar-process').css('width',processWidth)
