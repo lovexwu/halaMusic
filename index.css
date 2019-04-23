@@ -103,7 +103,6 @@ main .info{
 .iconlist .iconfont{
   padding-right: 2vh;
   font-size: 3vh;
-  
 }
 .info .bar-area{
  display: flex;
@@ -114,6 +113,7 @@ main .info{
   background: rgba(255,255,255,0.5);
   height: 0.5vh;
   position: relative;
+  cursor: pointer;
 }
 .bar-area .bar-process{
   width: 10%;
