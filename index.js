@@ -80,7 +80,7 @@ var Footer={
   
   render:function(){
     var _this = this
-    $.getJSON('https://api.jirengu.com/fm/v2/getChannels.php')
+    $.getJSON('http://api.jirengu.com/fm/v2/getChannels.php')
       .done(function(ret){
         console.log(ret)
         _this.renderFooter(ret.channels)
@@ -173,7 +173,7 @@ var Fm={
   // 获取音乐
   loadMusic:function(){
     var _this = this
-    $.getJSON('https://api.jirengu.com/fm/v2/getSong.php',{channel:this.channelId})
+    $.getJSON('http://api.jirengu.com/fm/v2/getSong.php',{channel:this.channelId})
     .done(function(ret){
       _this.song = ret['song'][0]
       _this.setMusic()
@@ -195,7 +195,7 @@ var Fm={
   // 获取歌词
   loadLyric:function(){
     var _this = this
-    $.getJSON('https://api.jirengu.com/fm/v2/getLyric.php',{sid:this.song.sid})
+    $.getJSON('http://api.jirengu.com/fm/v2/getLyric.php',{sid:this.song.sid})
     .done(function(ret){
       var lyric = ret.lyric
       var lyricObj = {}
