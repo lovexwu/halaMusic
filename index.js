@@ -173,7 +173,7 @@ var Fm={
   // 获取音乐
   loadMusic:function(){
     var _this = this
-    $.getJSON('https://jirenguapi.applinzi.com/fm/getSong.php',{channel:this.channelId})
+    $.getJSON('https://api.jirengu.com/fm/v2/getChannels.php',{channel:this.channelId})
     .done(function(ret){
       _this.song = ret['song'][0]
       _this.setMusic()
